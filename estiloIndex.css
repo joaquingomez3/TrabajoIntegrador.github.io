@@ -33,3 +33,6 @@ nav {
     position: fixed;
     z-index: 100;
   }
+  body{
+    background-color: #eca023;
+  }
