@@ -3,6 +3,7 @@ h1{
 }
 nav {
     float: left;
+    justify-content: center;
   }
   
   nav ul {
