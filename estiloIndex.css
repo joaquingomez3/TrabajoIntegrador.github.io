@@ -5,7 +5,10 @@ nav {
     float: left;
     
   }
-  
+  header{
+    justify-content: center;
+    align-content: center;
+  }
   nav ul {
     list-style: none;
     overflow: hidden; 
@@ -22,7 +25,7 @@ nav {
     padding: 20px;
     color: #fff;
     text-decoration: none;
-    justify-content: center;
+    
   }
   
   nav ul li:hover {
