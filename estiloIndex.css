@@ -1,5 +1,7 @@
-h1{
+h1 img{
     text-align: center;
+    width: 80px;
+    height: 30;
 }
 nav {
     float: left;
