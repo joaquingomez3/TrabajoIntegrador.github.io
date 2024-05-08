@@ -26,15 +26,15 @@ nav {
   }
   
   nav ul li:hover {
-    background: #eca023;
+    background: red;
   }
   
   header {
-    background: rgba(0,0,0,0.7);
+    background: blue;
     width: 100%;
     position: fixed;
     z-index: 100;
   }
   body{
-    background-color: gray;
+    background-color: white;
   }
