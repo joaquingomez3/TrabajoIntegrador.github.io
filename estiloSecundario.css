@@ -20,6 +20,7 @@ img{
     nav li {
       display: inline-block;
       padding: 20px;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
     
     nav a {
@@ -31,6 +32,7 @@ img{
     }
    nav  ul li a:hover {
       background: red;
+      transform: scale(1.1);
       
     }
     
