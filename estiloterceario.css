@@ -1,0 +1,49 @@
+img{
+    width: 25%;
+    float: left;
+    
+  }
+  nav {
+     margin-top: 15px;
+      text-align: center;
+      height: 60px;
+    }
+   
+    nav ul {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: blue;
+    }
+    
+    nav li {
+      display: inline-block;
+      padding: 20px;
+    }
+    
+    nav a {
+      color: white;
+      width: 100px;
+      text-decoration: none;
+     display: block;
+     
+    }
+   nav  ul li a:hover {
+      background: red;
+      
+    }
+    
+    header {
+      background-color: #F9F8FC;
+     
+    }
+    body{
+      background-color: white;
+    }
+  .logo{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  
+  }
