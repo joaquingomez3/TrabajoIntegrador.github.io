@@ -77,8 +77,8 @@ nav {
   left: 10px;
   transform: translateY(-50%);
   bottom: 250px;
-  color: blue;
-  background-color: black;
+  color: rgb(255, 255, 255);
+  background-color: rgb(145, 31, 31);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -88,7 +88,7 @@ nav {
   transform: translateY(-50%);
   bottom: 250px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: blue;
-  background-color: black ;
+  color: rgb(255, 255, 255);
+  background-color: rgb(145, 31, 31) ;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
