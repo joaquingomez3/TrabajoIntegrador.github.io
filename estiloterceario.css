@@ -14,7 +14,7 @@ img{
       text-align: center;
       margin: 0;
       padding: 0;
-      background-color: blue;
+      background-color: rgb(66, 106, 238);
     }
     
     nav li {
@@ -30,8 +30,8 @@ img{
      
     }
    nav  ul li a:hover {
-      background: red;
-      
+      background: rgb(223, 36, 36);
+      transform: scale(1.1);
     }
     
     header {
