@@ -15,7 +15,7 @@ nav {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: blue;
+    background-color: rgb(43, 71, 161);
   }
   
   nav li {
@@ -32,7 +32,7 @@ nav {
    
   }
  nav  ul li a:hover {
-    background: red;
+    background: rgb(145, 31, 31);
     transform: scale(1.1);
     
   }
@@ -72,19 +72,20 @@ nav {
   margin-bottom: 20px;
 }
 
-.atras {
+.atrasboton {
   position: absolute;
   left: 10px;
   transform: translateY(-50%);
   bottom: 250px;
+  color: blue;
+  background-color: ;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.adelante {
+.adelanteboton {
   position: absolute;
   right: 10px;
   transform: translateY(-50%);
   bottom: 250px;
-  color: rgb(87, 87, 255);
-  background-color: black;
-  background: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
