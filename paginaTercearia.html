@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estiloIndex.css" />
+    <link rel="stylesheet" href="estiloterceario.css" />
     <link rel="icon" href="iconoTM.png" />
     <title>CONTACTO</title>
   </head>
@@ -18,18 +18,101 @@
         <li><a href="paginaTercearia.html">CONTACTO</a></li>
       </ul>
     </nav>
-    <form action="">
-      <label for="name">NOMBRE</label><br />
-      <input type="text" name="name" maxlength="10" /><br />
-      <label for="dire">DIRECCION</label><br />
-      <input type="text" name="dire" /><br />
-      <label for="tel">TELEFONO</label><br />
-      <input type="tel" name="tel" /> <br />
-      <label for="pedido">PEDIDO</label><br />
-      <input type="text" name="pedido" /><br />
-      <button type="button" onclick="alert('SU PEDIDO HA SIDO REALIZADO')">
-        HACER PEDIDO
-      </button>
-    </form>
+    <div class="form-container" id="form">
+      <h1>HACE TU PEDIDO!!</h1>
+      <form id="miFormulario">
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          required
+          onchange="validarNombre()"
+        />
+        <span id="errorNombre" class="error"
+          >El nombre solo puede contener letras, espacios y caracteres
+          acentuados.</span
+        >
+
+        <label for="telefono">Teléfono:</label>
+        <input
+          type="tel"
+          id="telefono"
+          name="telefono"
+          required
+          onchange="validarTelefono()"
+        />
+        <span id="errorTelefono" class="error"
+          >El número de teléfono debe ser válido (e.g., 1234567890).</span
+        >
+
+        <div id="mensajeExito" class="success"></div>
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <script>
+      function validarNombre() {
+        const nombreInput = document.getElementById("nombre");
+        const errorNombre = document.getElementById("errorNombre");
+        const nombre = nombreInput.value;
+        const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$/;
+
+        if (regex.test(nombre)) {
+          errorNombre.style.display = "none";
+        } else {
+          errorNombre.style.display = "inline";
+        }
+      }
+
+      function validarTelefono() {
+        const telefonoInput = document.getElementById("telefono");
+        const errorTelefono = document.getElementById("errorTelefono");
+        const telefono = telefonoInput.value;
+        const regex = /^[1-9]\d{9}$/;
+
+        if (regex.test(telefono)) {
+          errorTelefono.style.display = "none";
+        } else {
+          errorTelefono.style.display = "inline";
+        }
+      }
+
+      document
+        .getElementById("miFormulario")
+        .addEventListener("submit", function (event) {
+          validarNombre();
+          validarTelefono();
+
+          const formularioValidado = true;
+          const errores = document.querySelectorAll(".error");
+          for (const error of errores) {
+            if (error.style.display === "inline") {
+              formularioValidado = false;
+              event.preventDefault();
+              break;
+            }
+          }
+          if (!formularioValidado) {
+            event.preventDefault();
+          } else {
+            event.preventDefault();
+            mostrarMensajeExito();
+          }
+        });
+      function mostrarMensajeExito() {
+        const mensajeExito = document.getElementById("mensajeExito");
+        mensajeExito.innerHTML = "";
+
+        const mensaje = document.createElement("p");
+        mensaje.textContent = "Formulario enviado";
+        mensaje.style.color = "green";
+
+        mensajeExito.appendChild(mensaje);
+
+        mensajeExito.style.display = "block";
+        const form = document.getElementById("form");
+        form.style.display = "none";
+      }
+    </script>
   </body>
 </html>
