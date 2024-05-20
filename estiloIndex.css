@@ -67,29 +67,37 @@ nav {
 }
 
 #foto {
-  width: 60%;
-  height: 60%;
+  width: 1000px;
+  height: 500px;
   margin-bottom: 20px;
 }
 
 .atrasboton {
   position: absolute;
-  left: 200px;
+  left: 172px;
   transform: translateY(-50%);
-  bottom: 50px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(223, 36, 36);
+  bottom: -363px;
+  color: rgb(0, 89, 255);
+  background-color: rgba(0, 217, 255, 0.404);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 500px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .adelanteboton {
   position: absolute;
-  right: 200px;
+  right: 172px;
   transform: translateY(-50%);
-  bottom: 50px;
+  bottom: -363px;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: rgb(255, 255, 255);
-  background-color: rgb(223, 36, 36) ;
-  height: 300px;
+  color: rgb(0, 89, 255);
+  background-color: rgba(0, 217, 255, 0.404) ;
+  height: 500px;
   width: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
 }
