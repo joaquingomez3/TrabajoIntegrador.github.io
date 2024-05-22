@@ -25,13 +25,15 @@
         <input type="text" id="nombre" /><br />
         <label>TELEFONO:</label>
         <input type="tel" id="tel" /><br />
-        <label>DINOS QUE QUIERES PEDIR:</label>
+        <label>HACE TU PEDIDO:</label>
         <textarea id="pedido"></textarea><br />
         <button type="submit">enviar</button>
       </form>
     </div>
+
     <ul id="ltaErrores"></ul>
     <ol id="ltaMensajes"></ol>
+
     <script>
       let nombre = document.getElementById("nombre");
       let tel = document.getElementById("tel");
@@ -57,10 +59,13 @@
           errores.push("Teléfono muy largo (10 dígitos)");
           tel.classList.add("error");
         }
-        if (tel.value.length > 0 && !regex_tel.test(tel.value)) {
+        if (!regex_tel.test(tel.value)) {
           errores.push(
             "Teléfono inválido (10 dígitos, no puede empezar con cero)"
           );
+          tel.classList.add("error");
+        } else if (tel.value.length < 0) {
+          errores.push("Ingrese numero de telefono");
           tel.classList.add("error");
         }
         if (pedido.value.length == 0) {

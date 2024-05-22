@@ -1,3 +1,9 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  
+  justify-content: center;
+  align-items: center;}
 img{
     width: 25%;
     float: left;
@@ -80,7 +86,7 @@ img{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
+    
     border-radius: 5px;
     box-sizing: border-box;
   }
@@ -91,7 +97,7 @@ img{
   .form-container input[type="text"]:focus,
   .form-container input[type="tel"]:focus,
   .form-container textarea:focus {
-    border-color: #007bff;
+    border-color: white;
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
   }
@@ -111,4 +117,6 @@ img{
   .error {
     border: 2px solid red;
    }
+   
+
   

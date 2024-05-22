@@ -49,3 +49,16 @@ img{
     display: flex;
   
   }
+  #titulo{
+    text-align: center;
+   
+    color: red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline blue;
+  }
+  #titulo2{
+    margin: 50px;
+    color: red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline blue;
+  }
