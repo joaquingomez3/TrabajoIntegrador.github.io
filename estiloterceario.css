@@ -119,7 +119,25 @@ img{
 
   .error {
     border: 2px solid red;
+    
    }
-   
-
+   .flex{
+    display: flex;
+   }
+   .mensajes ul{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+   }
+   .mensajes ol{
+    color:rgb(66, 106, 238);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    ;
+    font-size: x-large;
+   }
+   .mensajes h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline;
+    margin: 40px;
+    color:rgb(66, 106, 238) ;
+   }
   
