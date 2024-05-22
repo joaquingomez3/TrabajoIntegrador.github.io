@@ -54,11 +54,56 @@ img{
    
     color: red;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline blue;
+    text-decoration: underline  rgb(66, 106, 238);
   }
   #titulo2{
     margin: 50px;
     color: red;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline blue;
+    text-decoration: underline rgb(66, 106, 238);
+  }
+  #titulo3{
+    margin: 50px;
+    color: red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline rgb(66, 106, 238);
+  }
+  #titulo4{
+    margin: 50px;
+    color: red;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: underline rgb(66, 106, 238);
+  }
+  .tablaJabon{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tablaJabon th{
+    color:rgb(223, 36, 36);
+  }
+  .tablaJabon tr td{
+    text-align: center;
+    border:2px solid  rgb(66, 106, 238) ;
+  }
+  .tablaSuavizante{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tablaSuavizante th{
+    color:rgb(223, 36, 36);
+  }
+  .tablaSuavizante tr td{
+    text-align: center;
+    border:2px solid  rgb(66, 106, 238) ;
+  }
+  .tablaCloro{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tablaCloro th{
+    color:rgb(223, 36, 36);
+  }
+  .tablaCloro tr td{
+    text-align: center;
+    border:2px solid  rgb(66, 106, 238) ;
   }
