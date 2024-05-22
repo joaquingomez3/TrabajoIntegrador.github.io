@@ -18,100 +18,80 @@
         <li><a href="paginaTercearia.html">CONTACTO</a></li>
       </ul>
     </nav>
-    <div class="form-container" id="form">
-      <h1>CONTACTATE!!</h1>
-      <form id="miFormulario">
-        <label for="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          name="nombre"
-          required
-          onchange="validarNombre()"
-        />
-        <span id="errorNombre" class="error"
-          >El nombre solo puede contener letras, espacios y caracteres
-          acentuados.</span
-        >
-
-        <label for="telefono">Teléfono:</label>
-        <input
-          type="tel"
-          id="telefono"
-          name="telefono"
-          required
-          onchange="validarTelefono()"
-        />
-        <span id="errorTelefono" class="error"
-          >El número de teléfono debe ser válido (e.g., 1234567890).</span
-        >
-
-        <div id="mensajeExito" class="success"></div>
-        <input type="submit" value="Enviar" />
+    <div class="form-container">
+      <h1 id="titulo">HACE TU PEDIDO!</h1>
+      <form id="form" onsubmit="return validar()">
+        <label>NOMBRE:</label>
+        <input type="text" id="nombre" /><br />
+        <label>TELEFONO:</label>
+        <input type="tel" id="tel" /><br />
+        <label>DINOS QUE QUIERES PEDIR:</label>
+        <textarea id="pedido"></textarea><br />
+        <button type="submit">enviar</button>
       </form>
     </div>
+    <ul id="ltaErrores"></ul>
+    <ol id="ltaMensajes"></ol>
     <script>
-      function validarNombre() {
-        const nombreInput = document.getElementById("nombre");
-        const errorNombre = document.getElementById("errorNombre");
-        const nombre = nombreInput.value;
-        const regex = /^[A-Za-záéíóúÁÉÍÓÚñÑüÜ\s]+$/;
-
-        if (regex.test(nombre)) {
-          errorNombre.style.display = "none";
-        } else {
-          errorNombre.style.display = "inline";
+      let nombre = document.getElementById("nombre");
+      let tel = document.getElementById("tel");
+      let pedido = document.getElementById("pedido");
+      let ltaErrores = document.getElementById("ltaErrores");
+      let ltaMensajes = document.getElementById("ltaMensajes");
+      function validar() {
+        ltaErrores.innerHTML = "";
+        nombre.classList.remove("error");
+        tel.classList.remove("error");
+        pedido.classList.remove("error");
+        let errores = [];
+        let regex_tel = /^[1-9]\d{9}$/;
+        let nbre = nombre.value.trim();
+        if (nbre.length == 0) {
+          errores.push("Falta el nombre");
+          nombre.classList.add("error");
+        } else if (nbre.length > 9) {
+          errores.push("Nombre muy largo (9 caracteres)");
+          nombre.classList.add("error");
         }
-      }
-
-      function validarTelefono() {
-        const telefonoInput = document.getElementById("telefono");
-        const errorTelefono = document.getElementById("errorTelefono");
-        const telefono = telefonoInput.value;
-        const regex = /^[1-9]\d{9}$/;
-
-        if (regex.test(telefono)) {
-          errorTelefono.style.display = "none";
-        } else {
-          errorTelefono.style.display = "inline";
+        if (tel.value.length > 10) {
+          errores.push("Teléfono muy largo (10 dígitos)");
+          tel.classList.add("error");
         }
-      }
+        if (tel.value.length > 0 && !regex_tel.test(tel.value)) {
+          errores.push(
+            "Teléfono inválido (10 dígitos, no puede empezar con cero)"
+          );
+          tel.classList.add("error");
+        }
+        if (pedido.value.length == 0) {
+          errores.push(
+            "Falta escribir tu pedido, ingresalo asi te lo llevamos"
+          );
+          pedido.classList.add("error");
+        } else if (pedido.value.length > 100) {
+          errores.push("Pedido muy largo (maximo 100 caracteres)");
+          pedido.classList.add("error");
+        }
 
-      document
-        .getElementById("miFormulario")
-        .addEventListener("submit", function (event) {
-          validarNombre();
-          validarTelefono();
-
-          const formularioValidado = true;
-          const errores = document.querySelectorAll(".error");
-          for (const error of errores) {
-            if (error.style.display === "inline") {
-              formularioValidado = false;
-              event.preventDefault();
-              break;
-            }
-          }
-          if (!formularioValidado) {
-            event.preventDefault();
+        for (let err of errores) {
+          let li = document.createElement("li");
+          li.innerHTML = err;
+          ltaErrores.appendChild(li);
+        }
+        if (errores.length == 0) {
+          let li = document.createElement("li");
+          if (tel.value.length > 0) {
+            li.innerHTML = `Hola ${nbre}, te llamaremos al ${tel.value} su pedido es ${pedido.value}`;
           } else {
-            event.preventDefault();
-            mostrarMensajeExito();
+            li.innerHTML = `Hola ${nbre}, su pedido es ${pedido.value} `;
           }
-        });
-      function mostrarMensajeExito() {
-        const mensajeExito = document.getElementById("mensajeExito");
-        mensajeExito.innerHTML = "";
+          ltaMensajes.appendChild(li);
+          document.forms[0].reset();
 
-        const mensaje = document.createElement("p");
-        mensaje.textContent = "Formulario enviado";
-        mensaje.style.color = "green";
-
-        mensajeExito.appendChild(mensaje);
-
-        mensajeExito.style.display = "block";
-        const form = document.getElementById("form");
-        form.style.display = "none";
+          return false; //return true;//false para no enviar el form
+        } else {
+          return false; //si hubo errores cancelar el envío
+        }
       }
     </script>
   </body>
