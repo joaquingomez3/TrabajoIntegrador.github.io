@@ -74,12 +74,26 @@ nav {
 
 .atrasboton {
   position: absolute;
-  left: 172px;
-  transform: translateY(-50%);
-  bottom: -363px;
-  color: rgb(0, 89, 255);
-  background-color: rgba(0, 217, 255, 0.404);
+  left: 10%;
+  transform: translateY(-108%);
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 106, 238);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 500px;
+  width: 50px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+
+}
+
+.adelanteboton {
+  position: absolute;
+  right: 10%;
+  transform: translateY(-108%);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(66, 106, 238) ;
   height: 500px;
   width: 50px;
   border: none;
@@ -87,17 +101,9 @@ nav {
   z-index: 1;
 }
 
-.adelanteboton {
-  position: absolute;
-  right: 172px;
-  transform: translateY(-50%);
-  bottom: -363px;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  color: rgb(0, 89, 255);
-  background-color: rgba(0, 217, 255, 0.404) ;
-  height: 500px;
-  width: 50px;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
+.atrasboton:hover{
+  background-color: rgb(223, 36, 36);
+}
+.adelanteboton:hover{
+  background-color: rgb(223, 36, 36);
 }
