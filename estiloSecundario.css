@@ -107,3 +107,14 @@ img{
     text-align: center;
     border:2px solid  rgb(66, 106, 238) ;
   }
+  .tablaVeneno{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tablaVeneno th{
+    color:rgb(223, 36, 36);
+  }
+  .tablaVeneno tr td{
+    text-align: center;
+    border:2px solid  rgb(66, 106, 238) ;
+  }
