@@ -107,3 +107,19 @@ nav {
 .adelanteboton:hover{
   background-color: rgb(223, 36, 36);
 }
+
+.flexdatos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info {
+  background-color: blue;
+}
+.empresa{
+  background-color: green;
+}
+.pagos{
+  background-color: yellow;
+}
+
