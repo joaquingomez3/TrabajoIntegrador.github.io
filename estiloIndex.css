@@ -112,14 +112,31 @@ nav {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 100px;
 }
-.info {
+.datos {
   background-color: blue;
+  width: 325px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  margin: 20px;
 }
-.empresa{
-  background-color: green;
+.datos img{
+  width: 100%;
+  height: auto;
 }
-.pagos{
-  background-color: yellow;
+.contenido{
+  padding: 16px;
 }
+.contenido h3{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.contenido p{
+color:#666;
+font-size: 15px;
+line-height: 1.3;
+}
+
 
