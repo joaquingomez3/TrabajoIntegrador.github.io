@@ -131,10 +131,13 @@ nav {
 }
 .contenido h3{
   font-size: 28px;
+  color: rgb(31, 31, 31);
   margin-bottom: 8px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .contenido p{
-color:#666;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: gray;
 font-size: 15px;
 line-height: 1.3;
 }
