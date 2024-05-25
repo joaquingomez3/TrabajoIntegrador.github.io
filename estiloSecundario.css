@@ -52,25 +52,25 @@ img{
   #titulo{
     text-align: center;
    
-    color: red;
+    color:black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline  rgb(66, 106, 238);
+    text-decoration: underline rgb(66, 106, 238);
   }
   #titulo2{
     margin: 50px;
-    color: red;
+    color:black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: underline rgb(66, 106, 238);
   }
   #titulo3{
     margin: 50px;
-    color: red;
+    color:black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: underline rgb(66, 106, 238);
   }
   #titulo4{
     margin: 50px;
-    color: red;
+    color: black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-decoration: underline rgb(66, 106, 238);
   }
@@ -85,6 +85,9 @@ img{
   .tablaJabon tr td{
     text-align: center;
     border:2px solid  rgb(66, 106, 238) ;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(66, 106, 238) ;
+    color: white;
   }
   .tablaSuavizante{
     width: 100%;
@@ -97,6 +100,9 @@ img{
   .tablaSuavizante tr td{
     text-align: center;
     border:2px solid  rgb(66, 106, 238) ;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(66, 106, 238) ;
+    color: white;
   }
   .tablaCloro{
     width: 100%;
@@ -109,6 +115,9 @@ img{
   .tablaCloro tr td{
     text-align: center;
     border:2px solid  rgb(66, 106, 238) ;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(66, 106, 238) ;
+    color: white;
   }
   .tablaVeneno{
     width: 100%;
@@ -121,4 +130,7 @@ img{
   .tablaVeneno tr td{
     text-align: center;
     border:2px solid  rgb(66, 106, 238) ;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(66, 106, 238) ;
+    color: white;
   }
