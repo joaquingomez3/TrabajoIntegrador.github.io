@@ -50,29 +50,32 @@ img{
   
   }
   #titulo{
+    
     text-align: center;
-   
     color:black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline rgb(66, 106, 238);
+    text-decoration: underline black;
   }
   #titulo2{
     margin: 50px;
     color:black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline rgb(66, 106, 238);
+    text-decoration: underline black;
+    text-align: center;
   }
   #titulo3{
     margin: 50px;
     color:black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline rgb(66, 106, 238);
+    text-decoration: underline black;
+    text-align: center;
   }
   #titulo4{
     margin: 50px;
     color: black;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline rgb(66, 106, 238);
+    text-decoration: underline black;
+    text-align: center;
   }
   .tablaJabon{
     width: 100%;
