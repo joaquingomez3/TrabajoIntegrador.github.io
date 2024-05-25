@@ -79,7 +79,8 @@ img{
     border-collapse: collapse;
   }
   .tablaJabon th{
-    color:rgb(223, 36, 36);
+    color:white;
+    background-color:rgb(223, 36, 36) ;
   }
   .tablaJabon tr td{
     text-align: center;
@@ -90,7 +91,8 @@ img{
     border-collapse: collapse;
   }
   .tablaSuavizante th{
-    color:rgb(223, 36, 36);
+    color:white;
+    background-color:rgb(223, 36, 36) ;
   }
   .tablaSuavizante tr td{
     text-align: center;
@@ -101,7 +103,8 @@ img{
     border-collapse: collapse;
   }
   .tablaCloro th{
-    color:rgb(223, 36, 36);
+    color:white;
+    background-color:rgb(223, 36, 36) ;
   }
   .tablaCloro tr td{
     text-align: center;
@@ -112,7 +115,8 @@ img{
     border-collapse: collapse;
   }
   .tablaVeneno th{
-    color:rgb(223, 36, 36);
+    color:white;
+    background-color:rgb(223, 36, 36) ;
   }
   .tablaVeneno tr td{
     text-align: center;
