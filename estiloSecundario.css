@@ -96,7 +96,7 @@ img{
     border-bottom: 1px solid #ddd;
   }
   
-  tr:hover {
+  tr :hover {
     background-color:rgb(231, 41, 41);
   }
  
