@@ -50,90 +50,53 @@ img{
   
   }
   #titulo{
-    
+   
     text-align: center;
-    color:black;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline black;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(223, 36, 36);
   }
   #titulo2{
     margin: 50px;
     color:black;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline black;
-    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration:underline;
+    
   }
   #titulo3{
     margin: 50px;
     color:black;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline black;
-    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration:underline;
   }
   #titulo4{
     margin: 50px;
-    color: black;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-decoration: underline black;
-    text-align: center;
+    color:black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration:underline;
   }
-  .tablaJabon{
+  table{
     width: 100%;
     border-collapse: collapse;
   }
-  .tablaJabon th{
+  
+  th{
+    padding: 8px;
     color:white;
     background-color:rgb(223, 36, 36) ;
+    border-bottom: 1px solid #ddd;
   }
-  .tablaJabon tr td{
+  td{
+    
+    padding: 8px;
     text-align: center;
-    border:2px solid  rgb(66, 106, 238) ;
     font-family: 'Courier New', Courier, monospace;
     background-color: rgb(66, 106, 238) ;
     color: white;
+    border-bottom: 1px solid #ddd;
   }
-  .tablaSuavizante{
-    width: 100%;
-    border-collapse: collapse;
+  
+  tr:hover {
+    background-color:rgb(231, 41, 41);
   }
-  .tablaSuavizante th{
-    color:white;
-    background-color:rgb(223, 36, 36) ;
-  }
-  .tablaSuavizante tr td{
-    text-align: center;
-    border:2px solid  rgb(66, 106, 238) ;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(66, 106, 238) ;
-    color: white;
-  }
-  .tablaCloro{
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .tablaCloro th{
-    color:white;
-    background-color:rgb(223, 36, 36) ;
-  }
-  .tablaCloro tr td{
-    text-align: center;
-    border:2px solid  rgb(66, 106, 238) ;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(66, 106, 238) ;
-    color: white;
-  }
-  .tablaVeneno{
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .tablaVeneno th{
-    color:white;
-    background-color:rgb(223, 36, 36) ;
-  }
-  .tablaVeneno tr td{
-    text-align: center;
-    border:2px solid  rgb(66, 106, 238) ;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(66, 106, 238) ;
-    color: white;
-  }
+ 
