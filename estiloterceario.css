@@ -141,3 +141,6 @@ img{
     color:rgb(66, 106, 238) ;
    }
   
+   .puntos{
+    display: flex; justify-content: space-between;
+   }
