@@ -26,10 +26,10 @@
           <input type="text" id="nombre" /><br />
           <label>TELEFONO:</label>
           <input type="tel" id="tel" /><br />
-          <div class = "puntos">
-            <input type="radio" id="domicilio"/>
+          <div class="puntos">
+            <input type="radio" id="domicilio" name="radio" />
             <label>Envio a Domicilio</label>
-            <input type="radio" id="local"/>
+            <input type="radio" id="local" name="radio" />
             <label>Retiro en el Local</label><br />
           </div>
           <label>DIRRECION:</label>
@@ -49,6 +49,7 @@
       let nombre = document.getElementById("nombre");
       let tel = document.getElementById("tel");
       let pedido = document.getElementById("pedido");
+      let dire = document.getElementById("dire");
       let ltaErrores = document.getElementById("ltaErrores");
       let ltaMensajes = document.getElementById("ltaMensajes");
       function validar() {
@@ -57,9 +58,11 @@
         nombre.classList.remove("error");
         tel.classList.remove("error");
         pedido.classList.remove("error");
+        dire.classList.remove("error");
         let errores = [];
         let regex_tel = /^[1-9]\d{9}$/;
         let nbre = nombre.value.trim();
+        let domi = dire.value.trim();
         if (nbre.length == 0) {
           errores.push("Falta el nombre");
           nombre.classList.add("error");
@@ -89,7 +92,24 @@
           errores.push("Pedido muy largo (maximo 100 caracteres)");
           pedido.classList.add("error");
         }
-
+        if (document.getElementById("domicilio").checked) {
+          if (domi.length == 0) {
+            errores.push("Falta el domicilio");
+            dire.classList.add("error");
+          } else if (domi.length > 100) {
+            errores.push("Domicilio muy largo");
+            dire.classList.add("error");
+          }
+        } else {
+          if (
+            !document.getElementById("domicilio").checked &&
+            !document.getElementById("local").checked
+          ) {
+            errores.push("Seleccione un envio");
+            domicilio.classList.add("errorEnvio");
+            local.classList.add("errorEnvio");
+          }
+        }
         for (let err of errores) {
           let li = document.createElement("li");
           li.innerHTML = err;
