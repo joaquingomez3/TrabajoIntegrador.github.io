@@ -28,9 +28,9 @@
           <input type="tel" id="tel" /><br />
           <div class="puntos">
             <input type="radio" id="domicilio" name="radio" />
-            <label>Envio a Domicilio</label>
+            <label id="color1">Envio a Domicilio</label>
             <input type="radio" id="local" name="radio" />
-            <label>Retiro en el Local</label><br />
+            <label id="color1">Retiro en el Local</label><br />
           </div>
           <label>DIRRECION:</label>
           <input type="text" id="dire" /><br />
@@ -106,8 +106,6 @@
             !document.getElementById("local").checked
           ) {
             errores.push("Seleccione un envio");
-            domicilio.classList.add("errorEnvio");
-            local.classList.add("errorEnvio");
           }
         }
         for (let err of errores) {
