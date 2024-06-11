@@ -1,7 +1,21 @@
 <?php
-if (isset($_POST['email']) &&!empty($_POST['email'])) {
+  // Configuración del correo electrónico
+  $to = "gomezgonzalod46@gmail.com";
   $subject = "Nuevo formulario enviado";
-  $body = "NOMBRE: ". $_POST['nombre']. "\nTELEFONO: ". $_POST['telefono']. "\nDIRECCION: ". $_POST['direccion']. "\nPEDIDO: ". $_POST['pedido'];
-  mail("gomezgonzalod46@gmail.com", $subject, $body);
-}
+
+  // Recopilar la información del formulario
+  $nombre = $_POST["nombre"];
+  $telefono = $_POST["telefono"];
+  $direccion = $_POST["direccion"];
+  $pedido = $_POST["pedido"];
+
+  // Crear el cuerpo del correo electrónico
+  $body = "NOMBRE: $nombre\nTELEFONO: $telefono\nDIRECCION: $direccion\nPEDIDO: $pedido";
+
+  // Enviar el correo electrónico
+  mail($to, $subject, $body);
+
+  // Redirigir al usuario a una página de agradecimiento
+  
+  exit;
 ?>
