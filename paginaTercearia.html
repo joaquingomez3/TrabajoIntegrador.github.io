@@ -21,11 +21,16 @@
     <div class="flex">
       <div class="form-container">
         <h1 id="titulo">HACE TU PEDIDO!</h1>
-        <form action="contact.php" id="form" onsubmit="return validar()">
+        <form
+          action="contact.php"
+          method="post"
+          id="form"
+          onsubmit="return validar()"
+        >
           <label>NOMBRE:</label>
-          <input type="text" id="nombre" /><br />
+          <input type="text" id="nombre" name="nombre" /><br />
           <label>TELEFONO:</label>
-          <input type="tel" id="tel" /><br />
+          <input type="tel" id="tel" name="telefono" /><br />
           <div class="puntos">
             <input type="radio" id="domicilio" name="radio" />
             <label id="color1">Envio a Domicilio</label>
@@ -33,9 +38,9 @@
             <label id="color1">Retiro en el Local</label><br />
           </div>
           <label>DIRRECION:</label>
-          <input type="text" id="dire" /><br />
+          <input type="text" id="dire" name="direccion" /><br />
           <label>HACE TU PEDIDO:</label>
-          <textarea id="pedido"></textarea><br />
+          <textarea id="pedido" name="pedido"></textarea><br />
           <button type="submit">enviar</button>
         </form>
       </div>
