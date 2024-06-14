@@ -2,22 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TresMa</title>
+
     <script
       src="https://kit.fontawesome.com/16a025091f.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="estiloIndex.css" />
-    <title>TresMa</title>
-    <link rel="icon" href="iconoTM.png" />
   </head>
   <body>
     <header>
-      <div class="menu">
+      <div class="container__menu">
         <div class="logo">
           <img src="LogoTM.png" alt="" />
         </div>
-        <div class="flex-menu">
+        <div class="menu">
           <i class="fa-solid fa-bars" id="btn_menu"></i>
           <div id="back_menu"></div>
           <nav id="nav">
@@ -91,30 +93,22 @@
       document
         .getElementById("btn_menu")
         .addEventListener("click", mostrar_menu);
+
+      document
+        .getElementById("back_menu")
+        .addEventListener("click", ocultar_menu);
+
       nav = document.getElementById("nav");
       background_menu = document.getElementById("back_menu");
+
       function mostrar_menu() {
-        nav.style.rigth = "0px";
+        nav.style.right = "0px";
+        background_menu.style.display = "block";
       }
-      var num = 0;
-      let fotos = [
-        "imagenes/foto1.jpeg",
-        "imagenes/foto2.jpeg",
-        "imagenes/foto3.jpeg",
-        "imagenes/foto4.jpeg",
-        "imagenes/foto5.jpeg",
-      ];
-      function adelante() {
-        num++;
-        if (num == fotos.length) num = 0;
-        var foto = document.getElementById("foto");
-        foto.src = fotos[num];
-      }
-      function atras() {
-        num--;
-        if (num < 0) num = 4;
-        var foto = document.getElementById("foto");
-        foto.src = fotos[num];
+
+      function ocultar_menu() {
+        nav.style.right = "-250px";
+        background_menu.style.display = "none";
       }
     </script>
   </body>
