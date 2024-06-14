@@ -3,43 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/16a025091f.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="estiloIndex.css" />
     <title>TresMa</title>
     <link rel="icon" href="iconoTM.png" />
-    <script type="text/javascript">
-      var num = 0;
-      let fotos = [
-        "imagenes/foto1.jpeg",
-        "imagenes/foto2.jpeg",
-        "imagenes/foto3.jpeg",
-        "imagenes/foto4.jpeg",
-        "imagenes/foto5.jpeg",
-      ];
-      function adelante() {
-        num++;
-        if (num == fotos.length) num = 0;
-        var foto = document.getElementById("foto");
-        foto.src = fotos[num];
-      }
-      function atras() {
-        num--;
-        if (num < 0) num = 4;
-        var foto = document.getElementById("foto");
-        foto.src = fotos[num];
-      }
-    </script>
   </head>
   <body>
-    <div class="logo">
-      <img src="LogoTM.png" alt="" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">INICIO</a></li>
-        <li><a href="paginaSecundaria.html">PRECIOS</a></li>
-        <li><a href="paginaTercearia.html">CONTACTO</a></li>
-      </ul>
-    </nav>
+    <header>
+      <div class="menu">
+        <div class="logo">
+          <img src="LogoTM.png" alt="" />
+        </div>
+        <div class="flex-menu">
+          <i class="fa-solid fa-bars" id="btn_menu"></i>
+          <div id="back_menu"></div>
+          <nav id="nav">
+            <img src="LogoTM.png" alt="" />
+            <ul>
+              <li><a href="index.html" id="selected">INICIO</a></li>
+              <li><a href="paginaSecundaria.html">PRECIOS</a></li>
+              <li><a href="paginaTercearia.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
     <div calss="caruosel">
       <div class="carousel-inner">
         <img src="imagenes/foto1.jpeg" id="foto" />
@@ -96,5 +87,35 @@
         </div>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("btn_menu")
+        .addEventListener("click", mostrar_menu);
+      nav = document.getElementById("nav");
+      background_menu = document.getElementById("back_menu");
+      function mostrar_menu() {
+        nav.style.rigth = "0px";
+      }
+      var num = 0;
+      let fotos = [
+        "imagenes/foto1.jpeg",
+        "imagenes/foto2.jpeg",
+        "imagenes/foto3.jpeg",
+        "imagenes/foto4.jpeg",
+        "imagenes/foto5.jpeg",
+      ];
+      function adelante() {
+        num++;
+        if (num == fotos.length) num = 0;
+        var foto = document.getElementById("foto");
+        foto.src = fotos[num];
+      }
+      function atras() {
+        num--;
+        if (num < 0) num = 4;
+        var foto = document.getElementById("foto");
+        foto.src = fotos[num];
+      }
+    </script>
   </body>
 </html>
