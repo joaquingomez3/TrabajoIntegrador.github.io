@@ -177,22 +177,26 @@ header{
   }
   
   .atrasboton {
-    
+    text-align: center;
     transform: translateY(-108%);
     color: rgb(255, 255, 255);
     background-color: rgb(66, 106, 238);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    
-  
+    display: flex;
+  padding: 20px;
+  margin: 30px;
   }
   
   .adelanteboton {
-   
+   text-align: center;
     transform: translateY(-108%);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(255, 255, 255);
     background-color: rgb(66, 106, 238) ;
-   
+   display: grid;
+   padding: 20px;
+  margin: 30px;
+  float: right
   }
   
   .atrasboton:hover{
